@@ -1,0 +1,5 @@
+
+info 2016.06.14 10:22:51 log_test.php: this is an test log!
+info 2016.06.14 16:29:02 log_test.php: this is an test log!
+info 2016.06.14 16:29:04 log_test.php: this is an test log!
+info 2016.06.15 18:06:16 log_test.php: this is an test log!
