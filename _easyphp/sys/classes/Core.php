@@ -28,8 +28,6 @@ class easy{
 			$lifetime = self::$cacheLifetime;
 		}
 		
-		echo $lifetime;
-		
 		if($data === null){ // get cache
 			if(is_file($filePath)){
 				// easy::CACHE_FOEVER means never expired

@@ -12,10 +12,15 @@ class Admin
 	
 	function login($username, $password)
 	{
-		$code = $this->_login->login();
+		$code = $this->_login->login($username, $password);
 		if($code >= 0) {
-			$this->_profile->load($code);
+			$this->_profile = new AdminProfile()->load($code);
 		}
+	}
+	
+	function logout()
+	{
+		$this->_profile->unload();
 	}
 	
 	function getProfile()

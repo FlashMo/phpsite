@@ -1,3 +1,4 @@
+drop database if exists phpsite;
 create database if not exists phpsite;
 use phpsite;
 
@@ -14,6 +15,7 @@ create table if not exists article
 	title varchar(64) not null,
 	content text not null,
 	categoryID int,
+	createTime datetime not null,
 	primary key (id),
 	foreign key (categoryID) references category (id)
 );
@@ -32,6 +34,7 @@ create table if not exists adminLogin
 	password varchar(256),
 	adminProfileID int not null,
 	primary key (username),
+	unique key (adminProfileID),
 	foreign key (adminProfileID) references adminProfile(id)
 );
 
